@@ -1,0 +1,24 @@
+#   FRONT:        http://localhost:3000
+#   REST-сервис:  http://localhost:8080  (POST /transfer, POST /confirmOperation)
+services:
+
+  backend:
+    build: .
+    image: money-transfer-service
+    container_name: money-transfer-service
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./logs:/app/logs                # журнал переводов
+
+  front:
+    build:
+      context: ./front
+      args:
+        REACT_APP_API_URL: http://localhost:8080
+    image: money-transfer-front
+    container_name: money-transfer-front
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend

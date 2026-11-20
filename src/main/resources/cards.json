@@ -1,0 +1,5 @@
+[
+  { "number": "1111111111111111", "validTill": "12/30", "cvv": "111", "currency": "RUR", "balance": 10000000 },
+  { "number": "2222222222222222", "validTill": "11/30", "cvv": "222", "currency": "RUR", "balance": 5000000 },
+  { "number": "3333333333333333", "validTill": "10/30", "cvv": "333", "currency": "RUR", "balance": 100000 }
+]

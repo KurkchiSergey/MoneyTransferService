@@ -1,0 +1,6 @@
+target/
+logs/
+front/
+.git/
+.idea/
+.gigaide/
